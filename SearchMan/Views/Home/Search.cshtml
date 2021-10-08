@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "Home Page";
 }
 
 <!DOCTYPE html>
@@ -7,45 +7,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/custom.css")
+    
 
 </head>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
 </head>
 <body>
+
     <form name="search">
-    <div class="search d-flex">
-        <input id="searchBox" type="text" name="searchKeyword" class="form-control " required="true" placeholder="Search by name, agent code or policy number">
-        <input class="btn btn-primary" type="submit" value="Find" id="btnSearch">
-    </div>
-        @{ 
+        <div class="search d-flex">
+            <input id="searchBox" type="text" name="searchKeyword" class="form-control " required placeholder="Search by name, agent code or policy number">
+            <input class="btn btn-primary" type="submit" value="Find" id="btnSearch">
+        </div>
 
-            
 
-        }
+        <input type="text" value="hola mundo">
 
-    <input type="text" value="hola mundo" >
-    <table class="table">
+        <input type="submit">
+
+    </form>
+
+    <table class="display" id="coneo">
         <thead>
             <tr>
-                <th scope="col">id</th>
-                <th scope="col">nombre</th>
+                <th>Column 1</th>
+                <th>Column 2</th>
             </tr>
         </thead>
         <tbody>
-
             <tr>
-                <td>1</td>
-                <td>Carlos</td>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
             </tr>
         </tbody>
     </table>
-    <input type="submit" >
 
-        </form>
+    @Scripts.Render("~/page/search")
+
 
 </body>
 </html>
