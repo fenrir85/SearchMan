@@ -26,5 +26,12 @@ namespace SearchMan.Controllers
 
             return View();
         }
+
+        public ActionResult Search()
+        {
+            ViewBag.Message = "Your search page.";
+
+            return View();
+        }
     }
 }
