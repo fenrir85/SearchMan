@@ -33,5 +33,13 @@ namespace SearchMan.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Searching(string searchKeyword)
+        {
+            ViewBag.Message = "Searching results.";
+
+            return View(new {searchKeyword});
+        }
     }
 }
