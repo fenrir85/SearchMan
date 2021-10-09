@@ -16,18 +16,19 @@
 </head>
 <body>
 
-    <form name="search">
+    @using (Html.BeginForm("QueryView", "Home", FormMethod.Post))
+    {
         <div class="search d-flex">
             <input id="searchBox" type="text" name="searchKeyword" class="form-control " required placeholder="Search by name, agent code or policy number">
             <input class="btn btn-primary" type="submit" value="Find" id="btnSearch">
         </div>
 
-
-        <input type="text" value="hola mundo">
-
         <input type="submit">
+    }
 
-    </form>
+
+
+
 
     <table class="display" id="coneo">
         <thead>
